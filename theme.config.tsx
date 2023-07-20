@@ -1,8 +1,10 @@
+// @ts-ignore
 import React from 'react'
+// @ts-ignore
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span><img src="./biscuit.png"></img> Biscuit Guide</span>,
+  logo: <span><img src="https://github.com/oasisjs/biscuit/blob/main/assets/icon.png"></img> Biscuit Guide</span>,
   project: {
     link: 'https://github.com/oasisjs/biscuit',
   },
