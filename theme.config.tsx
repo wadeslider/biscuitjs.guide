@@ -2,16 +2,16 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span><img src="./biscuit.png"></img> Biscuit Guide</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/oasisjs/biscuit',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/NgAsrAUJBC',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Biscuitjs Guide WadeSlider 2023',
   },
 }
 
