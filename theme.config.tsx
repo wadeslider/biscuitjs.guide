@@ -1,6 +1,4 @@
-// @ts-ignore
 import React from 'react'
-// @ts-ignore
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
