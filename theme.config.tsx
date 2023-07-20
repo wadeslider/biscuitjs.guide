@@ -4,7 +4,7 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span><img src="https://github.com/oasisjs/biscuit/blob/main/assets/icon.png"></img> Biscuit Guide</span>,
+  logo: <span>Biscuit Guide</span>,
   project: {
     link: 'https://github.com/oasisjs/biscuit',
   },
