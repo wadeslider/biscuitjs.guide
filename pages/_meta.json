@@ -1,12 +1,16 @@
 {
   "index": "Introducción",
-  "instalacion": "Instalación y preparación",
+  "--": {
+    "type": "separator",
+    "title": "Instalacion y preparacion"
+  },
+  "instalacion": "Node.js & Biscuit",
   "about": {
     "title": "About",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contacto ↗",
     "type": "page",
     "href": "https://discord.gg/FA9k7f3uq6",
     "newWindow": true
