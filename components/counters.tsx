@@ -1,6 +1,8 @@
 // Example from https://beta.reactjs.org/learn
 
+//@ts-ignore
 import { useState } from 'react'
+//@ts-ignore
 import styles from './counters.module.css'
 
 function MyButton() {

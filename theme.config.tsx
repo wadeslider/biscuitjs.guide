@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.gg/NgAsrAUJBC',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/wadeslider/biscuitjs.guide',
   footer: {
     text: 'Biscuitjs Guide WadeSlider 2023',
   },
