@@ -6,6 +6,7 @@
   },
   "instalacion": "Node.js & Biscuit",
   "configuracion": "Configurando una aplicacion",
+  "anadir": "Añadiendo tu bot a servidores",
   "about": {
     "title": "About",
     "type": "page"
