@@ -16,7 +16,7 @@ Almacenar datos en un archivo ` config.json ` es una forma común de mantener se
 <Tab>
 ```json filename="config.json" showLineNumbers copy
 {
-    "token": "tu-token-aqui"
+    "token": "su-token-va-aquí"
 }
 ```
 </Tab>
@@ -34,3 +34,73 @@ console.log(token);
 
 Si utiliza Git, no debe confirmar este archivo e ignorarlo mediante ` .gitignore `.
 </Callout>
+
+## Usando variables de entorno
+
+Las variables de entorno son valores especiales para tu entorno (por ejemplo, sesión de terminal, contenedor Docker o archivo de variables de entorno). Puedes pasar estos valores al ámbito de tu código para poder utilizarlos.
+
+Una forma de pasar variables de entorno es a través de la interfaz de línea de comandos. Al iniciar su aplicación, en lugar de ` node index.js `, utilice ` TOKEN=su-token-va-aquí node index.js `. Puedes repetir este patrón para exponer otros valores también.
+
+Puedes acceder a los valores establecidos en tu código a través de la variable global ` process.env `, accesible en cualquier archivo. Ten en cuenta que los valores pasados de esta manera siempre serán cadenas y que puede que necesites parsearlos a un número, si los usas para hacer cálculos.
+
+<Tabs items={["Consola", "Modo de uso"]}>
+<Tab>
+```shell filename="shell" copy
+A=123 B=456 TOKEN=su-token-va-aquí node index.js
+```
+</Tab>
+<Tab>
+```js filename="index.js" showLineNumbers copy
+console.log(process.env.A);
+console.log(process.env.B);
+console.log(process.env.TOKEN);
+```
+</Tab>
+</Tabs>
+
+## Usando dotenv
+
+Otro enfoque común es almacenar estos valores en un archivo ` .env `. Esto le evita tener que copiar siempre su token en la línea de comandos. Cada línea en un archivo ` .env ` debe contener un par ` CLAVE=valor `.
+
+Puedes usar el [paquete ` dotenv `](https://www.npmjs.com/package/dotenv) para esto. Una vez instalado, requiere y usa el paquete para cargar tu archivo ` .env ` y adjuntar las variables a ` process.env `:
+
+```shell npm2yarn copy
+npm install dotenv
+```
+
+<Tabs items={[".env", "Modo de uso"]}>
+<Tab>
+```env filename=".env" showLineNumbers copy
+A=123
+B=456 
+TOKEN=su-token-va-aquí
+```
+</Tab>
+<Tab>
+```js filename="index.js" showLineNumbers copy
+require("dotenv").config();
+
+console.log(process.env.A);
+console.log(process.env.B);
+console.log(process.env.TOKEN);
+```
+</Tab>
+</Tabs>
+
+<Callout type="error" emoji="️⚠️">
+**PELIGRO**
+
+Si utiliza Git, no debe confirmar este archivo e ignorarlo mediante ` .gitignore `.
+</Callout>
+
+## Git y ` .gitignore `
+
+Git es una herramienta fantástica para hacer un seguimiento de tus cambios de código y te permite subir el progreso a servicios como [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) o [Bitbucket](https://bitbucket.org/product). Aunque esto es súper útil para compartir código con otros desarrolladores, ¡también conlleva el riesgo de subir tus archivos de configuración con valores sensibles!
+
+Puedes especificar archivos que Git debería ignorar en sus sistemas de versionado con un archivo ` .gitignore `. Crea un archivo ` .gitignore ` en el directorio de tu proyecto y añade los nombres de los archivos y carpetas que quieres ignorar:
+
+```gitignore filename=".gitignore" showLineNumbers copy
+node_modules
+.env
+config.json
+```
