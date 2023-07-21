@@ -1,12 +1,17 @@
 {
   "index": "Introducción",
-  "--": {
+  "-": {
     "type": "separator",
     "title": "Instalacion y preparacion"
   },
-  "instalacion": "Node.js & Biscuit",
-  "configuracion": "Configurando una aplicacion",
-  "anadir": "Añadiendo tu bot a servidores",
+  "preparacion": "Node.js & Biscuit",
+  "configuracion-tu-aplicacion-bot": "Configurando una aplicacion",
+  "anadir-tu-bot-a-servidores": "Añadiendo tu bot a servidores",
+  "--": {
+    "type": "separator",
+    "title": "Creando tu bot"
+  },
+  "archivos-de-configuracion": "Archivos de configuracion",
   "about": {
     "title": "About",
     "type": "page"

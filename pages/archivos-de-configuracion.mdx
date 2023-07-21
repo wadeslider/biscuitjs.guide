@@ -1,0 +1,36 @@
+import { Tabs, Tab, Callout } from 'nextra/components'
+
+# Archivos de configuracion
+
+Una vez que ya hallas [añadido tu bot a un servidor](/anadir-tu-bot-a-servidores), el siguiente paso es empezar a codificar y manternerlo en linea. Vamos a empezar creando un archivo de configuracion para el token de tu bot. y tambien el archivo inicial.
+
+Como se explica en la sección "[¿Qué es el token?](/configuracion-tu-aplicacion-bot#qué-es-el-token)", tu token es esencialmente la contraseña de tu bot, y deberías protegerlo lo mejor posible. Esto se puede hacer a través de un archivo ` config.json ` o mediante el uso de variables de entorno.
+
+Abre tu aplicación en el [Portal del Desarrollador de Discord](https://discord.com/developers/applications) y ve a la página "Bot" para copiar tu token.
+
+## Usando ` config.json `
+
+Almacenar datos en un archivo ` config.json ` es una forma común de mantener seguros tus valores sensibles. Crea un archivo ` config.json ` en el directorio de tu proyecto y pega tu token. Puedes acceder a tu token dentro de otros archivos usando ` require() `.
+
+<Tabs items={["config.json", "Modo de uso"]}>
+<Tab>
+```json filename="config.json" showLineNumbers copy
+{
+    "token": "tu-token-aqui"
+}
+```
+</Tab>
+<Tab>
+```js filename="index.js" showLineNumbers copy
+const { token } = require("./config.json");
+
+console.log(token);
+```
+</Tab>
+</Tabs>
+
+<Callout type="error" emoji="️⚠️">
+**PELIGRO**
+
+Si utiliza Git, no debe confirmar este archivo e ignorarlo mediante ` .gitignore `.
+</Callout>

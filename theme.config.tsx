@@ -47,7 +47,7 @@ export default {
     key: 'discord',
     text: (
       <a href="https://discord.gg/NgAsrAUJBC" target="_blank">
-        🎉 La nueva version ah llegado →
+        🎉 La nueva version ha llegado →
       </a>
     )
   },
