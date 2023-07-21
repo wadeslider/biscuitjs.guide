@@ -5,6 +5,7 @@
     "title": "Instalacion y preparacion"
   },
   "instalacion": "Node.js & Biscuit",
+  "configuracion": "Configurando una aplicacion",
   "about": {
     "title": "About",
     "type": "page"
