@@ -51,5 +51,25 @@ export default {
       </a>
     )
   },
-  faviconGlyph: "🤖"
+  faviconGlyph: "🤖",
+  feedback: {
+    content: "¿Preguntas? Danos tu opinion →"
+  },
+  editLink: {
+    text: "Edita esta pagina →"
+  },
+  toc: {
+    title: "En esta pagina:",
+    extraContent: "WadeSlider",
+    float: false
+  },
+  themeSwitch: {
+    useOptions() {
+      return {
+        light: "Claro",
+        dark: "Oscuro",
+        system: "Sistema"
+      }
+    }
+  }
 }
