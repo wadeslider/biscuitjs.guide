@@ -1,14 +1,14 @@
+import { Callout } from 'nextra/components'
+
 # Instalando Node.js y Biscuit
 
 Para usar Biscuit, tu necesitas instalar [Node.js](https://nodejs.org/), Biscuit v3 necesitas Node v18 en adelante.
 
-```shell filename="Tip"
-# Puedes ver tu version de node instalada con  el siguiente comando:
+<Callout type="info" emoji="🎈">
+Tip
 
-node -v
-
-# Debe ser v18.x, si es asi puedes continuar leyendo.
-```
+Puedes ver tu version de node instalada con el siguiente comando ` node -v ` debe ser v18.x, si es asi puedes continuar leyendo.
+</Callout>
 
 Para instalar [Node.js](https://nodejs.org/) en windows, ve a la pagina oficial y descargue el instalador, lo ejecuta y listo.
 
@@ -24,20 +24,12 @@ En Linx consulta [esta pagina](https://nodejs.org/en/download/package-manager/) 
 Para usar Biscuit, los necesitas instalar via npm (Node's package manager). npm se instala automaticamente cuando instalas node, asi que no hay que preocuparse por instalarlo. Sin embargo, antes de instalar algo debes configurar una carpeta para el proyecto.
 
 ## Abriendo la terminal
+ 
+<Callout type="info" emoji="🎈">
+Tip
 
-```shell filename="Tip"
-# Si tu estas utilizando Visual Studio Code, debes presionar:
-
-Ctrl + `
-
-# (backtick)
-
-# O
-
-Ctrl + ñ
-
-# para abrir la terminal integrado
-```
+Si tu estas utilizando Visual Studio Code, debes presionar: `` Ctrl + ` `` (backtick) o ` Ctrl + ñ ` para abrir la terminal integrado
+</Callout>
 
 Para Windows:
 
@@ -57,7 +49,7 @@ Con la terminal abierta, ejecuta ` node -v ` y si esta instalado devera devolver
 
 ## Inicializar el proyecto
 
-```shell npm2yarn
+```shell npm2yarn copy
 npm init
 ```
 
@@ -65,9 +57,22 @@ Este comando creara un archivo llamado ` package.json ` para ti, donde vendran l
 
 Este te pedira algunos datos y deberas ir respondiendo
 
-Tambien puedes hacerlo automatico com:
+<Callout type="info" emoji="🎈">
+Tip
 
-```shell npm2yarn
+Tambien puedes hacerlo automatico con esta funcion.
+
+```shell npm2yarn copy
 npm init -y
 ```
+</Callout>
 
+Despues de esto ya estas listo para utilizar Biscuit
+
+## Instalando Biscuit
+
+```shell npm2yarn copy
+npm install @biscuitland/core
+```
+
+Para crear tu bot es necesario tenerlo instalado, si es asi, ya puedes crear tu bot. 🎈🤖
