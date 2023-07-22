@@ -1,0 +1,55 @@
+import { Callout } from 'nextra/components'
+
+# Creando el archivo principal
+ 
+<Callout type="info">
+  Esta página asume que ya has preparado los archivos de configuración de la página anterior. Estamos utilizando el .env, sin embargo, ¡siéntete libre de sustituirlos por los tuyos!
+</Callout>
+
+Abra su editor de código y cree un nuevo archivo. Te sugerimos que guardes el archivo como ` index.js `, pero puedes ponerle el nombre que desees.
+
+Aquí está el código base para empezar:
+
+```js filename="index.js" showLineNumbers copy
+// Requerimos las clases necesarias de Biscuit
+const { Session } = require("@biscuitland/core");
+const { GatewayIntentBits } = require("@biscuitland/common");
+
+// Instanciamos una Session
+const session = new Session({
+  intents: GatewayIntentBits.Guilds, // Los intents, este es para los servidores
+  token: process.env.TOKEN // Token del env
+});
+
+// Esto es para cuando el bot prende (solo una vez)
+// Aqui vamos a prender el bot, la variable payload para acceder a los datos de tu bot
+session.once("READY", (payload) => {
+  const username = payload.user.username; // Para obtener el nombre del bot
+  console.log("Se inicio sesion en: %s", username); // Esto dira cunado inicie sesion
+});
+
+// Para logearse con el bot
+session.start();
+```
+
+Así es como creas una instancia de una session para tu bot de Discord e inicias sesión en Discord. La opción de intents, GatewayIntentBits.Guilds, es necesaria para que la session de Biscuit funcione como esperas, esto para que el bot pueda leer como las id de los servers, roles, o canales.
+
+<Callout type="info">
+  El término "guild" es utilizado por la API de Discord y en Biscuit para referirse a un servidor de Discord.
+</Callout>
+
+Los intents también definen los eventos que Discord debe enviar a tu bot, y es posible que desees habilitar más que sólo el mínimo. Puedes leer más sobre los otros intents en el tema Intents.
+
+## Ejecutando tu aplicacion
+
+Abre tu terminal y ejecuta ` node index.js ` para empezar el proceso. Si tu vez "Se inicio sesion en: %s", estas listo para continuar.
+
+<Callout type="info">
+Puede abrir su archivo ` package.json ` y editar el campo ` "main": "index.js" ` para que apunte a tu archivo principal. A continuación, puede ejecutar ` node . ` en su terminal para iniciar el proceso.
+
+Después de cerrar el proceso con ` Ctrl + C `, puedes pulsar la flecha hacia arriba de tu teclado para que aparezcan los últimos comandos que has ejecutado. Pulsar arriba y luego enter después de cerrar el proceso es una forma rápida de iniciarlo de nuevo.
+</Callout>
+
+### Codigo resultante
+
+Si quieres comparar tu codigo para evitar errores, puedes hacerlo desde acá. (aun no disponlible)

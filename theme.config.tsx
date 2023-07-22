@@ -56,7 +56,7 @@ export default {
     content: "¿Preguntas? Danos tu opinion →"
   },
   editLink: {
-    text: "Edita esta pagina →"
+    text: "Edita esta pagina →",
   },
   toc: {
     title: "En esta pagina:",
